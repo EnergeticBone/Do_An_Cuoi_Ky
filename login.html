@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container sign-in-container">
+            <form id="loginForm" onsubmit="login(event)">
+                <h1>Đăng nhập</h1>
+                <input type="text" id="loginUsername" placeholder="Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Đăng nhập</button>
+                <span>Chưa có tài khoản <a href="index.html" onclick="showRegister()">Đăng kí</a></span>
+            </form>
+        </div>
+        <div class="form-container sign-up-container">
+            <form id="registerForm" onsubmit="register(event)">
+                <h1>Tạo tài khoản</h1>
+                <input type="text" id="registerUsername" placeholder="Username" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <input type="email" id="registerEmail" placeholder="Email" required>
+                <button type="submit">Đăng ký</button>
+                <span>Đã có tài khoản? <a href="index.html" onclick="showLogin()">Đăng nhập</a></span>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Chào mừng trở lại!</h1>
+                    <p>Để kết nối với chúng tôi vui lòng đăng nhập tài khoản cá nhân của bạn</p>
+                    <button class="ghost" onclick="showLogin()">Đăng nhập</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>ChocoLux chào bạn!</h1>
+                    <p>Nhập thông tin cá nhân và mua sắm cùng chúng tôi nào</p>
+                    <button class="ghost" onclick="showRegister()">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
